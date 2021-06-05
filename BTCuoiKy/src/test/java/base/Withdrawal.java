@@ -26,6 +26,13 @@ public class Withdrawal {
         WebElement login = driver.findElement(By.name("btnLogin"));
         login.submit();
     }
+
+    @BeforeClass
+    public void WithdrawalNext(){
+        WebElement submit = driver.findElement(By.xpath("//a[contains(text(),'Withdrawal')]"));
+        submit.click();
+    }
+
     @Test
     public void Withdrawal(){
         WebElement accountno  = driver.findElement(By.name("accountno"));
