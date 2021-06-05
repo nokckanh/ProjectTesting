@@ -26,16 +26,59 @@ public class AddNewAccount {
         WebElement login = driver.findElement(By.name("btnLogin"));
         login.submit();
     }
+
     @Test
-    public void AddNewAccount(){
+    public void TC008(){
         WebElement newAccount = driver.findElement(By.xpath("//a[contains(text(),'New Account')]"));
         newAccount.click();
         WebElement customerId= driver.findElement(By.name("cusid"));
-        customerId.sendKeys("30246");
+        customerId.sendKeys("78801");
         WebElement type = driver.findElement(By.xpath("//option[contains(text(),'Current')]"));
         type.click();
         WebElement deposit=  driver.findElement(By.name("inideposit"));
-        deposit.sendKeys("1000000");
+        deposit.sendKeys("1000");
+        WebElement submit = driver.findElement(By.name("button2"));
+        submit.click();
+    }
+
+    @Test
+    public void TC009(){
+        WebElement newAccount = driver.findElement(By.xpath("//a[contains(text(),'New Account')]"));
+        newAccount.click();
+        WebElement customerId= driver.findElement(By.name("cusid"));
+        customerId.sendKeys("78801");
+        WebElement type = driver.findElement(By.xpath("//option[contains(text(),'Current')]"));
+        type.click();
+        WebElement deposit=  driver.findElement(By.name("inideposit"));
+        deposit.sendKeys("499");
+        WebElement submit = driver.findElement(By.name("button2"));
+        submit.click();
+    }
+
+    @Test
+    public void TC010(){
+        WebElement newAccount = driver.findElement(By.xpath("//a[contains(text(),'New Account')]"));
+        newAccount.click();
+        WebElement customerId= driver.findElement(By.name("cusid"));
+        customerId.sendKeys("222222");
+        WebElement type = driver.findElement(By.xpath("//option[contains(text(),'Current')]"));
+        type.click();
+        WebElement deposit=  driver.findElement(By.name("inideposit"));
+        deposit.sendKeys("1000");
+        WebElement submit = driver.findElement(By.name("button2"));
+        submit.click();
+    }
+
+    @Test
+    public void TC011(){
+        WebElement newAccount = driver.findElement(By.xpath("//a[contains(text(),'New Account')]"));
+        newAccount.click();
+        WebElement customerId= driver.findElement(By.name("cusid"));
+        customerId.sendKeys("sssss");
+        WebElement type = driver.findElement(By.xpath("//option[contains(text(),'Current')]"));
+        type.click();
+        WebElement deposit=  driver.findElement(By.name("inideposit"));
+        deposit.sendKeys("sssss");
         WebElement submit = driver.findElement(By.name("button2"));
         submit.click();
     }

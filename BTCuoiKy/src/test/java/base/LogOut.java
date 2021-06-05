@@ -28,7 +28,7 @@ public class LogOut {
         login.submit();
     }
     @Test
-    public void Withdrawal(){
+    public void TC025(){
         WebElement submit = driver.findElement(By.xpath("//a[contains(text(),'Log out')]"));
         submit.click();
     }

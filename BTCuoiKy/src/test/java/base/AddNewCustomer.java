@@ -27,38 +27,29 @@ public class AddNewCustomer {
         login.submit();
     }
     @Test
-    public void AddNewCustomer(){
+    public void TC005(){
         WebElement newCustomer = driver.findElement(By.xpath("//a[contains(text(),'New Customer')]"));
         newCustomer.click();
 
         WebElement name = driver.findElement(By.name("name"));
-        name.sendKeys("TestName");
-        WebElement gender = driver.findElement(By.xpath("//tbody/tr[5]/td[2]/input[2]"));
+        name.sendKeys("Trinh Van Hieu");
+        WebElement gender = driver.findElement(By.xpath("//tbody/tr[5]/td[2]/input[1]"));
         gender.click();
         WebElement dob = driver.findElement(By.id("dob"));
-        dob.sendKeys("10/10/2000");
+        dob.sendKeys("1/6/2000");
         WebElement address = driver.findElement(By.name("addr"));
-        address.sendKeys("TestAddress");
+        address.sendKeys("Đà Nẵng");
         WebElement city = driver.findElement(By.name("city"));
-        city.sendKeys("TestCity");
+        city.sendKeys("BMT");
         WebElement state = driver.findElement(By.name("state"));
-        state.sendKeys("TestState");
+        state.sendKeys("nonsense");
 
-        //unable submit
-//        WebElement pin = driver.findElement(By.name("pinno"));
-//        pin.sendKeys("TestPIN");
-//        WebElement telephone = driver.findElement(By.name("telephoneno"));
-//        telephone.sendKeys("TestTelephone");
-//        WebElement email = driver.findElement(By.name("emailid"));
-//        email.sendKeys("TestEmail");
-
-        // allow
         WebElement pin = driver.findElement(By.name("pinno"));
-        pin.sendKeys("123456");
+        pin.sendKeys("123456789");
         WebElement telephone = driver.findElement(By.name("telephoneno"));
         telephone.sendKeys("0123456789");
         WebElement email = driver.findElement(By.name("emailid"));
-        email.sendKeys("abc111jbfsdjbBZCXxz@gmail.com");
+        email.sendKeys("vanhieu1234@me");
 
         WebElement password = driver.findElement(By.name("password"));
         password.sendKeys("123456789");
@@ -66,4 +57,63 @@ public class AddNewCustomer {
         submit.click();
     }
 
+    @Test
+    public void TC006(){
+        WebElement newCustomer = driver.findElement(By.xpath("//a[contains(text(),'New Customer')]"));
+        newCustomer.click();
+
+        WebElement name = driver.findElement(By.name("name"));
+        name.sendKeys("hieu");
+        WebElement gender = driver.findElement(By.xpath("//tbody/tr[5]/td[2]/input[1]"));
+        gender.click();
+        WebElement dob = driver.findElement(By.id("dob"));
+        dob.sendKeys("01/07/2000");
+        WebElement address = driver.findElement(By.name("addr"));
+        address.sendKeys("BMT");
+        WebElement city = driver.findElement(By.name("city"));
+        city.sendKeys("BMT");
+        WebElement state = driver.findElement(By.name("state"));
+        state.sendKeys("nonsense");
+
+        WebElement pin = driver.findElement(By.name("pinno"));
+        pin.sendKeys("123456789");
+        WebElement telephone = driver.findElement(By.name("telephoneno"));
+        telephone.sendKeys("0123456789");
+        WebElement email = driver.findElement(By.name("emailid"));
+        email.sendKeys("vanhieu@me");
+        WebElement password = driver.findElement(By.name("password"));
+        password.sendKeys("123456789");
+        WebElement submit = driver.findElement(By.name("sub"));
+        submit.click();
+    }
+
+    @Test
+    public void TC007(){
+        WebElement newCustomer = driver.findElement(By.xpath("//a[contains(text(),'New Customer')]"));
+        newCustomer.click();
+
+        WebElement name = driver.findElement(By.name("name"));
+        name.sendKeys("hieu");
+        WebElement gender = driver.findElement(By.xpath("//tbody/tr[5]/td[2]/input[1]"));
+        gender.click();
+        WebElement dob = driver.findElement(By.id("dob"));
+        dob.sendKeys("");
+        WebElement address = driver.findElement(By.name("addr"));
+        address.sendKeys("");
+        WebElement city = driver.findElement(By.name("city"));
+        city.sendKeys("");
+        WebElement state = driver.findElement(By.name("state"));
+        state.sendKeys("");
+
+        WebElement pin = driver.findElement(By.name("pinno"));
+        pin.sendKeys("");
+        WebElement telephone = driver.findElement(By.name("telephoneno"));
+        telephone.sendKeys("");
+        WebElement email = driver.findElement(By.name("emailid"));
+        email.sendKeys("");
+        WebElement password = driver.findElement(By.name("password"));
+        password.sendKeys("");
+        WebElement submit = driver.findElement(By.name("sub"));
+        submit.click();
+    }
 }

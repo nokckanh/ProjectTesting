@@ -27,20 +27,45 @@ public class Deposit {
         login.submit();
     }
 
-    @BeforeClass
-    public void WithdrawalNext(){
-        WebElement submit = driver.findElement(By.xpath("//a[contains(text(),'Deposit')]"));
+
+    @Test
+    public void TC0012(){
+        WebElement deposit = driver.findElement(By.xpath("//a[contains(text(),'Deposit')]"));
+        deposit.click();
+        WebElement accountno  = driver.findElement(By.name("accountno"));
+        accountno.sendKeys("92964");
+        WebElement amount = driver.findElement(By.name("ammount"));
+        accountno.sendKeys("100");
+        WebElement description = driver.findElement(By.name("desc"));
+        description.sendKeys("deposit1");
+        WebElement submit = driver.findElement(By.name("AccSubmit"));
         submit.click();
     }
 
     @Test
-    public void DepositTest(){
+    public void TC0013(){
+        WebElement deposit = driver.findElement(By.xpath("//a[contains(text(),'Deposit')]"));
+        deposit.click();
         WebElement accountno  = driver.findElement(By.name("accountno"));
-        accountno.sendKeys("93432");
+        accountno.sendKeys("2222222");
         WebElement amount = driver.findElement(By.name("ammount"));
-        accountno.sendKeys("10000000");
+        accountno.sendKeys("100");
         WebElement description = driver.findElement(By.name("desc"));
-        description.sendKeys("TestDescription");
+        description.sendKeys("deposit1");
+        WebElement submit = driver.findElement(By.name("AccSubmit"));
+        submit.click();
+    }
+
+    @Test
+    public void TC0014(){
+        WebElement deposit = driver.findElement(By.xpath("//a[contains(text(),'Deposit')]"));
+        deposit.click();
+        WebElement accountno  = driver.findElement(By.name("accountno"));
+        accountno.sendKeys("");
+        WebElement amount = driver.findElement(By.name("ammount"));
+        accountno.sendKeys("");
+        WebElement description = driver.findElement(By.name("desc"));
+        description.sendKeys("");
         WebElement submit = driver.findElement(By.name("AccSubmit"));
         submit.click();
     }

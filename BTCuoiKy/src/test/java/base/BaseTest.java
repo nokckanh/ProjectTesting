@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 //customerid = 30246
+//customerid = 54175
 //account = 93432
 public class BaseTest {
     private WebDriver driver;
@@ -25,12 +26,45 @@ public class BaseTest {
     }
 
     @Test
-    public void LoginTest() {
+    public void TC001() {
 
         WebElement username = driver.findElement(By.name("uid"));
         username.sendKeys("mngr330797");
         WebElement password = driver.findElement(By.name("password"));
         password.sendKeys("hUtahUm");
+        WebElement login = driver.findElement(By.name("btnLogin"));
+        login.submit();
+    }
+
+    @Test
+    public void TC002() {
+
+        WebElement username = driver.findElement(By.name("uid"));
+        username.sendKeys("mngr330797");
+        WebElement password = driver.findElement(By.name("password"));
+        password.sendKeys("123123");
+        WebElement login = driver.findElement(By.name("btnLogin"));
+        login.submit();
+    }
+
+    @Test
+    public void TC003() {
+
+        WebElement username = driver.findElement(By.name("uid"));
+        username.sendKeys("vanhieu123");
+        WebElement password = driver.findElement(By.name("password"));
+        password.sendKeys("hUtahUm");
+        WebElement login = driver.findElement(By.name("btnLogin"));
+        login.submit();
+    }
+
+    @Test
+    public void TC004() {
+
+        WebElement username = driver.findElement(By.name("uid"));
+        username.sendKeys("");
+        WebElement password = driver.findElement(By.name("password"));
+        password.sendKeys("");
         WebElement login = driver.findElement(By.name("btnLogin"));
         login.submit();
     }

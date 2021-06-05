@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Withdrawal {
+public class FundTransfer {
     private WebDriver driver;
     @BeforeClass
     public void BrowserOpen() {
@@ -26,42 +26,34 @@ public class Withdrawal {
         WebElement login = driver.findElement(By.name("btnLogin"));
         login.submit();
     }
+    //account = 93432
+    //account = 93505
     @Test
-    public void TC015(){
-        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Withdrawal')]"));
+    public void TC019(){
+        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Fund Transfer')]"));
         withdrawal.click();
-        WebElement accountno  = driver.findElement(By.name("accountno"));
-        accountno.sendKeys("92964");
+        WebElement payer = driver.findElement(By.name("payersaccount"));
+        payer.sendKeys("93432");
+        WebElement payee = driver.findElement(By.name("payeeaccount"));
+        payee.sendKeys("93505");
         WebElement amount = driver.findElement(By.name("ammount"));
-        accountno.sendKeys("100");
+        amount.sendKeys("20");
         WebElement description = driver.findElement(By.name("desc"));
-        description.sendKeys("Widthdraw1");
+        description.sendKeys("Transfer");
         WebElement submit = driver.findElement(By.name("AccSubmit"));
         submit.click();
     }
 
     @Test
-    public void TC016(){
-        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Withdrawal')]"));
+    public void TC020(){
+        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Fund Transfer')]"));
         withdrawal.click();
-        WebElement accountno  = driver.findElement(By.name("accountno"));
-        accountno.sendKeys("92964");
+        WebElement payer = driver.findElement(By.name("payersaccount"));
+        payer.sendKeys("");
+        WebElement payee = driver.findElement(By.name("payeeaccount"));
+        payee.sendKeys("");
         WebElement amount = driver.findElement(By.name("ammount"));
-        accountno.sendKeys("100");
-        WebElement description = driver.findElement(By.name("desc"));
-        description.sendKeys("Widthdraw1");
-        WebElement submit = driver.findElement(By.name("AccSubmit"));
-        submit.click();
-    }
-
-    @Test
-    public void TC017(){
-        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Withdrawal')]"));
-        withdrawal.click();
-        WebElement accountno  = driver.findElement(By.name("accountno"));
-        accountno.sendKeys("");
-        WebElement amount = driver.findElement(By.name("ammount"));
-        accountno.sendKeys("");
+        amount.sendKeys("");
         WebElement description = driver.findElement(By.name("desc"));
         description.sendKeys("");
         WebElement submit = driver.findElement(By.name("AccSubmit"));
