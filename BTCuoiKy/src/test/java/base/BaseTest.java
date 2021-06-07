@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.AssertJUnit;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -27,46 +28,69 @@ public class BaseTest {
 
     @Test
     public void TC001() {
+        try{
+            WebElement username = driver.findElement(By.name("uid"));
+            username.sendKeys("mngr330797");
+            WebElement password = driver.findElement(By.name("password"));
+            password.sendKeys("hUtahUm");
+            WebElement login = driver.findElement(By.name("btnLogin"));
+            login.submit();
+            AssertJUnit.assertTrue(true);
+        }catch (Exception e){
+            AssertJUnit.assertTrue(false);
+        }
 
-        WebElement username = driver.findElement(By.name("uid"));
-        username.sendKeys("mngr330797");
-        WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("hUtahUm");
-        WebElement login = driver.findElement(By.name("btnLogin"));
-        login.submit();
     }
 
     @Test
     public void TC002() {
-
-        WebElement username = driver.findElement(By.name("uid"));
-        username.sendKeys("mngr330797");
-        WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("123123");
-        WebElement login = driver.findElement(By.name("btnLogin"));
-        login.submit();
+        try {
+            WebElement username = driver.findElement(By.name("uid"));
+            username.sendKeys("mngr330797");
+            WebElement password = driver.findElement(By.name("password"));
+            password.sendKeys("123123");
+            WebElement login = driver.findElement(By.name("btnLogin"));
+            login.submit();
+            AssertJUnit.assertTrue(true);
+        }catch (Exception e){
+            AssertJUnit.assertTrue(false);
+        }
     }
 
     @Test
     public void TC003() {
+        try{
+            WebElement username = driver.findElement(By.name("uid"));
+            username.sendKeys("vanhieu123");
+            WebElement password = driver.findElement(By.name("password"));
+            password.sendKeys("hUtahUm");
+            WebElement login = driver.findElement(By.name("btnLogin"));
+            login.submit();
+            AssertJUnit.assertTrue(true);
+        }catch (Exception e){
+            AssertJUnit.assertTrue(false);
+        }
 
-        WebElement username = driver.findElement(By.name("uid"));
-        username.sendKeys("vanhieu123");
-        WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("hUtahUm");
-        WebElement login = driver.findElement(By.name("btnLogin"));
-        login.submit();
     }
 
     @Test
     public void TC004() {
+        try{
+            WebElement username = driver.findElement(By.name("uid"));
+            username.sendKeys("");
+            WebElement password = driver.findElement(By.name("password"));
+            password.sendKeys("");
+            WebElement login = driver.findElement(By.name("btnLogin"));
+            login.submit();
+            WebElement mess = driver.findElement(By.id("message23"));
+            WebElement mess2 = driver.findElement(By.id("message18"));
+            if(mess!=null || mess2 !=null){
+                AssertJUnit.assertTrue(false);
+            }
+        }catch (Exception e){
+            AssertJUnit.assertTrue(false);
+        }
 
-        WebElement username = driver.findElement(By.name("uid"));
-        username.sendKeys("");
-        WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("");
-        WebElement login = driver.findElement(By.name("btnLogin"));
-        login.submit();
     }
 
 
