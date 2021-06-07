@@ -29,8 +29,7 @@ public class CustomizedStatement {
 
     @Test
     public void TC021(){
-        WebElement customizedStatement = driver.findElement(By.xpath("//a[contains(text(),'Customised Statement')]"));
-        customizedStatement.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/CustomisedStatementInput.php");
         WebElement account= driver.findElement(By.name("accountno"));
         account.sendKeys("93432");
         WebElement fdate= driver.findElement(By.name("fdate"));
@@ -47,8 +46,7 @@ public class CustomizedStatement {
 
     @Test
     public void TC022(){
-        WebElement customizedStatement = driver.findElement(By.xpath("//a[contains(text(),'Customised Statement')]"));
-        customizedStatement.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/CustomisedStatementInput.php");
         WebElement account= driver.findElement(By.name("accountno"));
         account.sendKeys("93432");
         WebElement fdate= driver.findElement(By.name("fdate"));
@@ -65,8 +63,7 @@ public class CustomizedStatement {
 
     @Test
     public void TC023(){
-        WebElement customizedStatement = driver.findElement(By.xpath("//a[contains(text(),'Customised Statement')]"));
-        customizedStatement.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/CustomisedStatementInput.php");
         WebElement account= driver.findElement(By.name("accountno"));
         account.sendKeys("111111");
         WebElement fdate= driver.findElement(By.name("fdate"));
@@ -83,8 +80,7 @@ public class CustomizedStatement {
 
     @Test
     public void TC024(){
-        WebElement customizedStatement = driver.findElement(By.xpath("//a[contains(text(),'Customised Statement')]"));
-        customizedStatement.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/CustomisedStatementInput.php");
         WebElement account= driver.findElement(By.name("accountno"));
         account.sendKeys("");
         WebElement fdate= driver.findElement(By.name("fdate"));

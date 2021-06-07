@@ -30,6 +30,7 @@ public class Deposit {
 
     @Test
     public void TC0012(){
+        driver.get("http://www.demo.guru99.com/V4/manager/DepositInput.php");
         WebElement deposit = driver.findElement(By.xpath("//a[contains(text(),'Deposit')]"));
         deposit.click();
         WebElement accountno  = driver.findElement(By.name("accountno"));
@@ -44,6 +45,7 @@ public class Deposit {
 
     @Test
     public void TC0013(){
+        driver.get("http://www.demo.guru99.com/V4/manager/DepositInput.php");
         WebElement deposit = driver.findElement(By.xpath("//a[contains(text(),'Deposit')]"));
         deposit.click();
         WebElement accountno  = driver.findElement(By.name("accountno"));
@@ -58,6 +60,7 @@ public class Deposit {
 
     @Test
     public void TC0014(){
+        driver.get("http://www.demo.guru99.com/V4/manager/DepositInput.php");
         WebElement deposit = driver.findElement(By.xpath("//a[contains(text(),'Deposit')]"));
         deposit.click();
         WebElement accountno  = driver.findElement(By.name("accountno"));

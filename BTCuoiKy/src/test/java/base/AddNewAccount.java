@@ -29,8 +29,7 @@ public class AddNewAccount {
 
     @Test
     public void TC008(){
-        WebElement newAccount = driver.findElement(By.xpath("//a[contains(text(),'New Account')]"));
-        newAccount.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/addAccount.php");
         WebElement customerId= driver.findElement(By.name("cusid"));
         customerId.sendKeys("78801");
         WebElement type = driver.findElement(By.xpath("//option[contains(text(),'Current')]"));
@@ -43,6 +42,7 @@ public class AddNewAccount {
 
     @Test
     public void TC009(){
+        driver.get("http://www.demo.guru99.com/V4/manager/addAccount.php");
         WebElement newAccount = driver.findElement(By.xpath("//a[contains(text(),'New Account')]"));
         newAccount.click();
         WebElement customerId= driver.findElement(By.name("cusid"));
@@ -57,6 +57,7 @@ public class AddNewAccount {
 
     @Test
     public void TC010(){
+        driver.get("http://www.demo.guru99.com/V4/manager/addAccount.php");
         WebElement newAccount = driver.findElement(By.xpath("//a[contains(text(),'New Account')]"));
         newAccount.click();
         WebElement customerId= driver.findElement(By.name("cusid"));
@@ -71,6 +72,7 @@ public class AddNewAccount {
 
     @Test
     public void TC011(){
+        driver.get("http://www.demo.guru99.com/V4/manager/addAccount.php");
         WebElement newAccount = driver.findElement(By.xpath("//a[contains(text(),'New Account')]"));
         newAccount.click();
         WebElement customerId= driver.findElement(By.name("cusid"));

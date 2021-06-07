@@ -28,9 +28,7 @@ public class AddNewCustomer {
     }
     @Test
     public void TC005(){
-        WebElement newCustomer = driver.findElement(By.xpath("//a[contains(text(),'New Customer')]"));
-        newCustomer.click();
-
+        driver.get("http://www.demo.guru99.com/V4/manager/addcustomerpage.php");
         WebElement name = driver.findElement(By.name("name"));
         name.sendKeys("Trinh Van Hieu");
         WebElement gender = driver.findElement(By.xpath("//tbody/tr[5]/td[2]/input[1]"));
@@ -59,8 +57,7 @@ public class AddNewCustomer {
 
     @Test
     public void TC006(){
-        WebElement newCustomer = driver.findElement(By.xpath("//a[contains(text(),'New Customer')]"));
-        newCustomer.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/addcustomerpage.php");
 
         WebElement name = driver.findElement(By.name("name"));
         name.sendKeys("hieu");
@@ -89,8 +86,7 @@ public class AddNewCustomer {
 
     @Test
     public void TC007(){
-        WebElement newCustomer = driver.findElement(By.xpath("//a[contains(text(),'New Customer')]"));
-        newCustomer.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/addcustomerpage.php");
 
         WebElement name = driver.findElement(By.name("name"));
         name.sendKeys("hieu");

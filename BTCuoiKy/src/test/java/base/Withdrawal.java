@@ -28,6 +28,7 @@ public class Withdrawal {
     }
     @Test
     public void TC015(){
+        driver.get("http://www.demo.guru99.com/V4/manager/WithdrawalInput.php");
         WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Withdrawal')]"));
         withdrawal.click();
         WebElement accountno  = driver.findElement(By.name("accountno"));
@@ -42,8 +43,7 @@ public class Withdrawal {
 
     @Test
     public void TC016(){
-        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Withdrawal')]"));
-        withdrawal.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/WithdrawalInput.php");
         WebElement accountno  = driver.findElement(By.name("accountno"));
         accountno.sendKeys("92964");
         WebElement amount = driver.findElement(By.name("ammount"));
@@ -56,8 +56,7 @@ public class Withdrawal {
 
     @Test
     public void TC017(){
-        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Withdrawal')]"));
-        withdrawal.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/WithdrawalInput.php");
         WebElement accountno  = driver.findElement(By.name("accountno"));
         accountno.sendKeys("");
         WebElement amount = driver.findElement(By.name("ammount"));

@@ -30,8 +30,7 @@ public class FundTransfer {
     //account = 93505
     @Test
     public void TC019(){
-        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Fund Transfer')]"));
-        withdrawal.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/FundTransInput.php");
         WebElement payer = driver.findElement(By.name("payersaccount"));
         payer.sendKeys("93432");
         WebElement payee = driver.findElement(By.name("payeeaccount"));
@@ -46,8 +45,8 @@ public class FundTransfer {
 
     @Test
     public void TC020(){
-        WebElement withdrawal = driver.findElement(By.xpath("//a[contains(text(),'Fund Transfer')]"));
-        withdrawal.click();
+        driver.get("http://www.demo.guru99.com/V4/manager/FundTransInput.php");
+
         WebElement payer = driver.findElement(By.name("payersaccount"));
         payer.sendKeys("");
         WebElement payee = driver.findElement(By.name("payeeaccount"));
